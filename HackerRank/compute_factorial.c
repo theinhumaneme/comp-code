@@ -24,19 +24,23 @@
 //         test_cases--;
 //     }
 // }
-int fact(int num){
-    if (num ==0){
-        return 1;
+long long int fact( long long int num){
+    if (num >=1){
+        return num*fact(num-1);
     }
     else{
-        return num*fact(num-1);
+        return 1;
     }
 }
 int main(){
     int test;
+    long long int number;
     scanf("%d",&test);
-    for(int i=0;i<test;i++){
-        int number;
-        scanf("%d\n",&number);
+    while(test--){
+        scanf("%lld",&number);
+        long long int return_number = fact(number);
+        printf("%lld\n",return_number%1000000007);
+        
     }
+    return 0;
 }
