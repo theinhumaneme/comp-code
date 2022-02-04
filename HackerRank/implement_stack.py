@@ -17,6 +17,6 @@ stack = StackSelf()
 for tc in range(int(input())):
     values = input().split(' ')
     if values[0] == 'push':
-       stack.push(int(values[1]))
+        stack.push(int(values[1]))
     elif values[0] == 'pop':
         stack.pop_element()
