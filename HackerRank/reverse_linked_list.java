@@ -1,6 +1,5 @@
 //https://www.hackerrank.com/challenges/reverse-a-linked-list/problem?isFullScreen=true
 
-
 import java.io.*;
 import java.math.*;
 import java.security.*;
@@ -43,7 +42,8 @@ public class Solution {
         }
     }
 
-    public static void printSinglyLinkedList(SinglyLinkedListNode node, String sep, BufferedWriter bufferedWriter) throws IOException {
+    public static void printSinglyLinkedList(SinglyLinkedListNode node, String sep, BufferedWriter bufferedWriter)
+            throws IOException {
         while (node != null) {
             bufferedWriter.write(String.valueOf(node.data));
 
@@ -54,42 +54,41 @@ public class Solution {
             }
         }
     }
-        public static SinglyLinkedListNode reverse(SinglyLinkedListNode head) {
-    // Write your code here
-    SinglyLinkedListNode next = null;
-    SinglyLinkedListNode prev = null;
-    SinglyLinkedListNode curr = head;
-    while(curr != null){
-        next = curr.next;
-        curr.next = prev;
-        prev = curr;
-        curr = next;           
+
+    public static SinglyLinkedListNode reverse(SinglyLinkedListNode head) {
+        // Write your code here
+        SinglyLinkedListNode next = null;
+        SinglyLinkedListNode prev = null;
+        SinglyLinkedListNode curr = head;
+        while (curr != null) {
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        return prev;
+
     }
-    return prev;
-    
-    }
 
-class Result {
+    class Result {
 
-    /*
-     * Complete the 'reverse' function below.
-     *
-     * The function is expected to return an INTEGER_SINGLY_LINKED_LIST.
-     * The function accepts INTEGER_SINGLY_LINKED_LIST llist as parameter.
-     */
+        /*
+         * Complete the 'reverse' function below.
+         *
+         * The function is expected to return an INTEGER_SINGLY_LINKED_LIST.
+         * The function accepts INTEGER_SINGLY_LINKED_LIST llist as parameter.
+         */
 
-    /*
-     * For your reference:
-     *
-     * SinglyLinkedListNode {
-     *     int data;
-     *     SinglyLinkedListNode next;
-     * }
-     *
-     */
-
-
+        /*
+         * For your reference:
+         *
+         * SinglyLinkedListNode {
+         * int data;
+         * SinglyLinkedListNode next;
+         * }
+         *
+         */
 
 }
 
-    private static final Scanner scanner = new Scanner(System.in);
+private static final Scanner scanner = new Scanner(System.in);

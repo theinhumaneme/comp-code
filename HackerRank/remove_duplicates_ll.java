@@ -42,7 +42,8 @@ public class Solution {
         }
     }
 
-    public static void printSinglyLinkedList(SinglyLinkedListNode node, String sep, BufferedWriter bufferedWriter) throws IOException {
+    public static void printSinglyLinkedList(SinglyLinkedListNode node, String sep, BufferedWriter bufferedWriter)
+            throws IOException {
         while (node != null) {
             bufferedWriter.write(String.valueOf(node.data));
 
@@ -53,16 +54,17 @@ public class Solution {
             }
         }
     }
+
     public static SinglyLinkedListNode removeDuplicates(SinglyLinkedListNode head) {
-    // Write your code here
-    if (head == null){
+        // Write your code here
+        if (head == null) {
             return head;
         }
         SinglyLinkedListNode temp_head = new SinglyLinkedListNode(head.data);
         SinglyLinkedListNode return_head = temp_head;
         head = head.next;
-        while(head!=null){
-            if (head.data != temp_head.data){
+        while (head != null) {
+            if (head.data != temp_head.data) {
                 temp_head.next = new SinglyLinkedListNode(head.data);
                 temp_head = temp_head.next;
             }
@@ -71,27 +73,26 @@ public class Solution {
         return return_head;
 
     }
-class Result {
 
-    /*
-     * Complete the 'removeDuplicates' function below.
-     *
-     * The function is expected to return an INTEGER_SINGLY_LINKED_LIST.
-     * The function accepts INTEGER_SINGLY_LINKED_LIST llist as parameter.
-     */
+    class Result {
 
-    /*
-     * For your reference:
-     *
-     * SinglyLinkedListNode {
-     *     int data;
-     *     SinglyLinkedListNode next;
-     * }
-     *
-     */
+        /*
+         * Complete the 'removeDuplicates' function below.
+         *
+         * The function is expected to return an INTEGER_SINGLY_LINKED_LIST.
+         * The function accepts INTEGER_SINGLY_LINKED_LIST llist as parameter.
+         */
 
-    
+        /*
+         * For your reference:
+         *
+         * SinglyLinkedListNode {
+         * int data;
+         * SinglyLinkedListNode next;
+         * }
+         *
+         */
 
 }
 
-    private static final Scanner scanner = new Scanner(System.in);
+private static final Scanner scanner = new Scanner(System.in);

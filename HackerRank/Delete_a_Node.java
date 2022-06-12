@@ -43,7 +43,8 @@ class SinglyLinkedList {
 }
 
 class SinglyLinkedListPrintHelper {
-    public static void printList(SinglyLinkedListNode node, String sep, BufferedWriter bufferedWriter) throws IOException {
+    public static void printList(SinglyLinkedListNode node, String sep, BufferedWriter bufferedWriter)
+            throws IOException {
         while (node != null) {
             bufferedWriter.write(String.valueOf(node.data));
 
@@ -56,7 +57,6 @@ class SinglyLinkedListPrintHelper {
     }
 }
 
-
 class Result {
 
     /*
@@ -64,37 +64,35 @@ class Result {
      *
      * The function is expected to return an INTEGER_SINGLY_LINKED_LIST.
      * The function accepts following parameters:
-     *  1. INTEGER_SINGLY_LINKED_LIST llist
-     *  2. INTEGER position
+     * 1. INTEGER_SINGLY_LINKED_LIST llist
+     * 2. INTEGER position
      */
 
     /*
      * For your reference:
      *
      * SinglyLinkedListNode {
-     *     int data;
-     *     SinglyLinkedListNode next;
+     * int data;
+     * SinglyLinkedListNode next;
      * }
      *
      */
-     public static SinglyLinkedListNode deleteNode(SinglyLinkedListNode llist, int position) {
-    // Write your code here
-    SinglyLinkedListNode head = llist;
-    if (position == 0){
-        head = llist.next;
+    public static SinglyLinkedListNode deleteNode(SinglyLinkedListNode llist, int position) {
+        // Write your code here
+        SinglyLinkedListNode head = llist;
+        if (position == 0) {
+            head = llist.next;
+            return head;
+        }
+        position -= 1;
+        while ((position)-- > 0) {
+            // if (llist.next == null) return null;
+            llist = llist.next;
+        }
+        SinglyLinkedListNode temp = llist.next;
+        llist.next = temp.next;
         return head;
     }
-    position-=1;
-    while((position)-- >0){
-        // if (llist.next == null) return null;
-        llist = llist.next;
-    }
-    SinglyLinkedListNode temp = llist.next;
-    llist.next = temp.next;
-    return head;
-    }
-
-    
 
 }
 

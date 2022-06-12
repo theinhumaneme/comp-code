@@ -51,33 +51,33 @@ public class Solution {
             }
         }
     }
+
     public static void reversePrint(SinglyLinkedListNode head) {
-    // Write your code here
-    if (head == null) return;
-    reversePrint(head.next);
-    System.out.println(head.data);
+        // Write your code here
+        if (head == null)
+            return;
+        reversePrint(head.next);
+        System.out.println(head.data);
     }
 
-class Result {
+    class Result {
 
-    /*
-     * Complete the 'reversePrint' function below.
-     *
-     * The function accepts INTEGER_SINGLY_LINKED_LIST llist as parameter.
-     */
+        /*
+         * Complete the 'reversePrint' function below.
+         *
+         * The function accepts INTEGER_SINGLY_LINKED_LIST llist as parameter.
+         */
 
-    /*
-     * For your reference:
-     *
-     * SinglyLinkedListNode {
-     *     int data;
-     *     SinglyLinkedListNode next;
-     * }
-     *
-     */
-
-    
+        /*
+         * For your reference:
+         *
+         * SinglyLinkedListNode {
+         * int data;
+         * SinglyLinkedListNode next;
+         * }
+         *
+         */
 
 }
 
-    private static final Scanner scanner = new Scanner(System.in);
+private static final Scanner scanner = new Scanner(System.in);
